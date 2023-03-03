@@ -2,6 +2,7 @@
     box-sizing: border-box;
   }
   
+  
   body {
     font-size: 22px;
     line-height: 1.5;
@@ -9,7 +10,10 @@
     color: #111;
     margin: 0;
     padding: 20px 40px;
-  
+
+    background: rgb(255,217,106);
+    background: linear-gradient(90deg, rgba(255,217,106,1) 0%, rgba(34,34,117,1) 60%, rgba(31,1,78,1) 100%);  
+
     /* This will center anything on your page */
     display: flex;
     align-items: center;
@@ -22,10 +26,10 @@
     gap: 20px;
     padding: 20px 30px;
     text-align: center;
-    border: 2px solid black;
     border-radius: 10px;
   }
-  
-  .time {
-    
+
+  .icon {
+    margin: 10px;
   }
+

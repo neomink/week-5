@@ -15,12 +15,23 @@ function getTime(){
     let hour = time.getHours();
     let minutes = time.getMinutes();
     let seconds = time.getSeconds();
+    let period = "AM";
 
     if (hour > 12) {
         hour = hour - 12;
+        period = "PM";
     }
+    if (7 > hour){
+        document.getElementById("sun").style.display = "none"
+        document.getElementById("moon").style.display = "initial"
+    }
+    if (7 < hour){
+        document.getElementById("sun").style.display = "initial"
+        document.getElementById("moon").style.display = "none"
+    }
+   
 
-    clock.innerHTML = `${hour<10 ? `0${hour}`:hour} : ${minutes<10 ? `0${minutes}`:minutes} : ${seconds<10 ? `0${seconds}`:seconds}`
+    clock.innerHTML = `${hour<10 ? `0${hour}`:hour} : ${minutes<10 ? `0${minutes}`:minutes} : ${seconds<10 ? `0${seconds}`:seconds} ${period}`
 }
 
 getTime()
@@ -30,4 +41,5 @@ function init(){
 }
 
 init();
+
 
